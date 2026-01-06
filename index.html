@@ -1,59 +1,71 @@
 <header class="hero">
-  <div class="hero-logo-container">
-    <img src="logo.png" alt="A&R HOMECRAFT Logo" class="hero-logo">
-    <a href="#contact" class="cta-btn-on-logo">Get Started</a>
+  <img src="logo.png" alt="A&R HOMECRAFT Logo" class="hero-logo">
+  <div class="hero-text">
+    <h1>Welcome to A&R HOMECRAFT</h1>
+    <p>Your trusted partner in quality home craftsmanship.</p>
+    <a href="#contact" class="cta-btn">Get Started</a>
   </div>
 </header>
 
 <style>
+  /* Hero section */
   .hero {
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* full viewport height */
     position: relative;
     overflow: hidden;
   }
 
-  .hero-logo-container {
-    position: relative; /* container for absolute positioning */
-    width: 100%;
-    height: 100%;
-  }
-
   .hero-logo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
+    width: 100%;       
+    height: 100vh;     
+    object-fit: cover;  
+    object-position: top; 
     display: block;
   }
 
-  /* CTA button positioned on the logo */
-  .cta-btn-on-logo {
+  /* Overlay text aligned to top */
+  .hero-text {
     position: absolute;
-    /* approximate placement: adjust % to match window on logo */
-    top: 55%;  /* adjust vertical position to under window */
-    left: 50%; /* center horizontally */
-    transform: translate(-50%, -50%);
-    background: #003366; /* dark blue to match house */
-    color: #fff;
-    padding: 12px 25px;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
+    top: 20px; /* distance from top of viewport */
+    left: 50%;
+    transform: translateX(-50%); /* center horizontally */
     text-align: center;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #8B0000; /* dark red */
+  }
+
+  .hero-text p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #003366; /* dark blue */
+  }
+
+  .hero-text a.cta-btn {
+    display: inline-block;
+    background: #8B0000;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-weight: bold;
     transition: background 0.3s;
   }
 
-  .cta-btn-on-logo:hover {
-    background: #002244;
+  .hero-text a.cta-btn:hover {
+    background: #a50000;
   }
 
+  /* Responsive */
   @media(max-width:768px){
-    .cta-btn-on-logo {
-      padding: 10px 20px;
-      font-size: 0.9rem;
-      top: 57%; /* adjust for smaller screens */
-    }
+    .hero-text h1 { font-size: 2rem; }
+    .hero-text p { font-size: 1rem; }
+    .hero-text a.cta-btn { padding: 12px 30px; }
   }
 </style>
