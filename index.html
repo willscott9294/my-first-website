@@ -1,6 +1,6 @@
-<header>
-  <div class="hero-container">
-    <img src="logo.png" alt="A&R HOMECRAFT Logo" class="logo">
+<header class="hero">
+  <img src="logo.png" alt="A&R HOMECRAFT Logo" class="hero-logo">
+  <div class="hero-text">
     <h1>Welcome to A&R HOMECRAFT</h1>
     <p>Your trusted partner in quality home craftsmanship.</p>
     <a href="#contact" class="cta-btn">Get Started</a>
@@ -8,36 +8,47 @@
 </header>
 
 <style>
-  header {
-    background: #fff; /* white for logo visibility */
-    height: 100vh; /* full screen */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* Hero section */
+  .hero {
+    width: 100%;
+    height: 100vh; /* full viewport height */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-logo {
+    width: 100%;       /* stretch full width */
+    height: 100vh;     /* stretch full height */
+    object-fit: cover;  /* scale without distortion */
+    object-position: top; /* align top of image */
+    display: block;
+  }
+
+  /* Overlay text */
+  .hero-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); /* center text vertically and horizontally */
     text-align: center;
-    padding: 20px;
-    flex-direction: column;
+    color: #fff;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5); /* make text visible over logo */
+    font-family: 'Roboto', sans-serif;
   }
 
-  header img.logo {
-    width: 300px; /* much larger logo */
-    max-width: 80%; /* responsive */
-    margin-bottom: 30px;
-  }
-
-  header h1 {
+  .hero-text h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     color: #8B0000; /* dark red */
   }
 
-  header p {
+  .hero-text p {
     font-size: 1.3rem;
     margin-bottom: 30px;
     color: #003366; /* dark blue */
   }
 
-  header a.cta-btn {
+  .hero-text a.cta-btn {
     display: inline-block;
     background: #8B0000;
     color: #fff;
@@ -47,13 +58,14 @@
     transition: background 0.3s;
   }
 
-  header a.cta-btn:hover {
+  .hero-text a.cta-btn:hover {
     background: #a50000;
   }
 
+  /* Responsive */
   @media(max-width:768px){
-    header img.logo { width: 200px; }
-    header h1 { font-size: 2rem; }
-    header p { font-size: 1rem; }
+    .hero-text h1 { font-size: 2rem; }
+    .hero-text p { font-size: 1rem; }
+    .hero-text a.cta-btn { padding: 12px 30px; }
   }
 </style>
