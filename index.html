@@ -16,6 +16,30 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    /* TOP NAVIGATION */
+    nav {
+      width: 100%;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      z-index: 1000;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #003366;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #8B0000;
+    }
+
     header {
       background: #ffffff;
       min-height: 100vh;
@@ -26,10 +50,9 @@
       padding-top: 40px;
     }
 
-    /* REDUCED FULL-WIDTH LOGO */
     .logo {
-      width: 70vw;          /* reduced from 100vw */
-      max-width: 900px;     /* hard cap so it never gets huge */
+      width: 70vw;
+      max-width: 900px;
       min-width: 300px;
       height: auto;
       object-fit: contain;
@@ -67,6 +90,11 @@
 
     /* MOBILE */
     @media (max-width: 768px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
       .logo {
         width: 85vw;
         max-width: 500px;
@@ -84,6 +112,15 @@
 </head>
 
 <body>
+
+  <!-- TOP NAV LINKS -->
+  <nav>
+    <a href="#who-we-are">Who We Are</a>
+    <a href="#what-we-do">What We Do</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#customer-care">Customer Care</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
 
   <header>
     <img src="logo.png" alt="A&R HOMECRAFT Logo" class="logo">
