@@ -15,6 +15,7 @@
     body {
       font-family: "Times New Roman", Times, serif;
       font-weight: bold;
+      scroll-behavior: smooth; /* smooth scrolling when nav links clicked */
     }
 
     /* TOP NAVIGATION */
@@ -74,6 +75,32 @@
       padding: 0 20px;
     }
 
+    /* SECTION STYLING */
+    section {
+      padding: 100px 20px;
+      text-align: center;
+      min-height: 80vh;
+    }
+
+    #who-we-are { background-color: #f9f9f9; }
+    #what-we-do { background-color: #e6e6e6; }
+    #gallery { background-color: #f9f9f9; }
+    #customer-care { background-color: #e6e6e6; }
+    #contact { background-color: #f9f9f9; }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #8B0000;
+    }
+
+    p.section-text {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: #003366;
+    }
+
     /* MOBILE */
     @media (max-width: 768px) {
       nav {
@@ -93,12 +120,21 @@
       p {
         font-size: 1rem;
       }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p.section-text {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- NAVIGATION -->
   <nav>
     <a href="#who-we-are">Who We Are</a>
     <a href="#what-we-do">What We Do</a>
@@ -107,13 +143,48 @@
     <a href="#contact">Contact Us</a>
   </nav>
 
+  <!-- HERO SECTION -->
   <header>
     <img src="logo.png" alt="A&R HOMECRAFT Logo" class="logo">
-
     <h1>Welcome to A&amp;R HOMECRAFT</h1>
-
     <p>Your trusted partner in quality home craftsmanship.</p>
   </header>
+
+  <!-- SECTIONS -->
+  <section id="who-we-are">
+    <h2>Who We Are</h2>
+    <p class="section-text">
+      We are a team of skilled craftsmen dedicated to creating beautiful, high-quality homes tailored to your lifestyle.
+    </p>
+  </section>
+
+  <section id="what-we-do">
+    <h2>What We Do</h2>
+    <p class="section-text">
+      From design to construction, we handle every aspect of building semi-custom homes with precision and care.
+    </p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p class="section-text">
+      Browse through our collection of completed projects showcasing our attention to detail and quality craftsmanship.
+    </p>
+  </section>
+
+  <section id="customer-care">
+    <h2>Customer Care</h2>
+    <p class="section-text">
+      We prioritize your satisfaction, providing support and guidance throughout the building process and beyond.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p class="section-text">
+      Get in touch today to discuss your dream home project or request a consultation.
+    </p>
+  </section>
 
 </body>
 </html>
